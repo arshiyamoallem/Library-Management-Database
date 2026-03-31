@@ -1,6 +1,9 @@
 """
+Student Name: Arshiya Moallem
+Student Number: 101324189
+
 Final SQlite Project 
-Library Database
+Library Database Management System
 """
 import time, sys
 
