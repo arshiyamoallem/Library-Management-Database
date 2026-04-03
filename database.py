@@ -107,22 +107,47 @@ class LibraryDB:
 
             INSERT INTO Books VALUES (978-0060935467, 'To Kill a Mockingbird', 1960-07-11, 3);
             INSERT INTO Books VALUES (978-0743273565, 'The Great Gatsby', 1925-04-10, 2); 
-            INSERT INTO Books VALUES (isbn, title, pub_date, copy_count); 
-            INSERT INTO Books VALUES (isbn, title, pub_date, copy_count); 
-            INSERT INTO Books VALUES (isbn, title, pub_date, copy_count); 
+            INSERT INTO Books VALUES (978-0747532699, 'Harry Potter and the Philosopher's Stone', 1997-06-26, 3); 
+            INSERT INTO Books VALUES (978-0810993136, 'Diary of a Wimpy Kid', 2007-04-01, 4); 
+            INSERT INTO Books VALUES (978-0810994737, 'Diary of a Wimpy Kid', 2008-02-01, 2); 
+            INSERT INTO Books VALUES (978-0141182704, 'Animal Farm: A Fairy Story', 1945-08-17, 2); 
 
             INSERT INTO Authors (name) VALUES ('Harper Lee');
             INSERT INTO Authors (name) VALUES ('F. Scott Fitzgerald');
-            INSERT INTO Authors (name) VALUES ('');
-            INSERT INTO Authors (name) VALUES ('');
-            INSERT INTO Authors (name) VALUES ('');
+            INSERT INTO Authors (name) VALUES ('J.K. Rowling');
+            INSERT INTO Authors (name) VALUES ('Jeff Kinney');
+            INSERT INTO Authors (name) VALUES ('George Orwell');
 
             INSERT INTO Genres (genre_name) VALUES ('Fiction');
-            INSERT INTO Genres (genre_name) VALUES ('Classic');
-            INSERT INTO Genres (genre_name) VALUES ('');
-            INSERT INTO Genres (genre_name) VALUES ('');
-            INSERT INTO Genres (genre_name) VALUES ('');
+            INSERT INTO Genres (genre_name) VALUES ('Tragedy');
+            INSERT INTO Genres (genre_name) VALUES ('Fantasy');
+            INSERT INTO Genres (genre_name) VALUES ('Comedy');
+            INSERT INTO Genres (genre_name) VALUES ('Allegory');
+                                 
+            INSERT INTO Patrons (name, email, password) VALUES (Joe Smith, joe@gmail.com, 123456);
+            INSERT INTO Patrons (name, email, password) VALUES (Alice McDonald, alice@gmail.com, $$password$$);
+            INSERT INTO Patrons (name, email, password) VALUES (Esfandiar Ghodrati, esfandiar@gmail.com, steve123);
 
+            INSERT INTO Authorship VALUES ('978-0060935467-0', 1);
+            INSERT INTO Authorship VALUES ('978-0060935467-0', 1);
+            INSERT INTO Authorship VALUES ('978-0060935467-0', 1);
+            INSERT INTO Authorship VALUES ('978-0060935467-0', 1);
+            INSERT INTO Authorship VALUES ('978-0060935467-0', 1);  
+
+            INSERT INTO Categorization VALUES ('978-0060935467-0', 1);
+            INSERT INTO Categorization VALUES ('978-0060935467-4', 4);                             
+            INSERT INTO Categorization VALUES ('978-0-316-76948-0', 1);
+            INSERT INTO Categorization VALUES ('978-0-316-76948-0', 4);  
+            INSERT INTO Categorization VALUES ('978-0-316-76948-0', 1);
+            INSERT INTO Categorization VALUES ('978-0-316-76948-0', 4);                             
+            INSERT INTO Categorization VALUES ('978-0-316-76948-0', 1);
+            INSERT INTO Categorization VALUES ('978-0-316-76948-0', 4);                  
+
+            INSERT INTO Circulation VALUES (name, email, password) VALUES (Joe Smith, joe@gmail.com, 123456);
+            INSERT INTO Circulation VALUES (name, email, password) VALUES (Joe Smith, joe@gmail.com, 123456);
+            INSERT INTO Circulation VALUES (name, email, password) VALUES (Joe Smith, joe@gmail.com, 123456);
+            INSERT INTO Circulation VALUES (name, email, password) VALUES (Joe Smith, joe@gmail.com, 123456);
+                                 
             """)
 
         def search_books_by_genre(self):
