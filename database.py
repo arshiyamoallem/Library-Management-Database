@@ -165,7 +165,7 @@ class LibraryDB:
         def get_all_genres(self):
             conn = self.get_connection()
             cursor = conn.cursor()
-            cursor.execute("SELECT genre_id, genre_name FROM Genres ORDER BY genre_name ASC")
+            cursor.execute("SELECT genre_id, genre_name FROM Genres ORDER BY genre_id ASC")
             results = cursor.fetchall()
             conn.close()
             return results
@@ -191,7 +191,7 @@ class LibraryDB:
         def get_all_patrons(self):
             conn = self.get_connection()
             cursor = conn.cursor()
-            cursor.execute("SELECT patron_id, name, email FROM Patrons ORDER BY name ASC")
+            cursor.execute("SELECT patron_id, name, email FROM Patrons ORDER BY patron_id ASC")
             results = cursor.fetchall()
             conn.close()
             return results
