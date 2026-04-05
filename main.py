@@ -78,7 +78,6 @@ class library_database_hub:
         for b in books:
             print(f"{b[0]:<25} {b[1]:<40} {b[2]:<12} {b[3]}")
  
-        # ─── R3.6: Drill-down query ───────────────────────────────────────────
         isbn = input("\nEnter an ISBN to view its authors and details (or press Enter to skip): ").strip()
         if isbn:
             book, authors = self.db.get_book_details(isbn)
@@ -92,7 +91,7 @@ class library_database_hub:
 
     def search_book_by_author(self) -> None:
         print("\n--- Search Books by Author ---")
-        author_name = input("Enter author name (or part of it): ").strip()
+        author_name = input("Enter author name: ").strip()
  
         results = self.db.search_books_by_author(author_name)
  
