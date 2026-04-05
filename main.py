@@ -7,6 +7,7 @@ Library Database Management System - UI Layer
 """
 
 import time, sys
+from datetime import datetime
 from database import LibraryDB
 
 class library_database_hub:
@@ -185,12 +186,19 @@ class library_database_hub:
             print("Book not found.")
             return
  
-        if book[2] <= 0:
+        if book[3] <= 0:
             print(f"Sorry, '{book[1]}' is currently unavailable.")
             return
  
         borrow_date = input("Enter borrow date (YYYY-MM-DD): ").strip()
         due_date = input("Enter due date (YYYY-MM-DD): ").strip()
+
+        try:
+            datetime.strptime(borrow_date, "%Y-%m-%d")
+            datetime.strptime(due_date, "%Y-%m-%d")
+        except ValueError:
+            print("Invalid date format. Please use YYYY-MM-DD.")
+            return
  
         success = self.db.borrow_book(patron_id, isbn, borrow_date, due_date)
         if success:
@@ -225,6 +233,12 @@ class library_database_hub:
  
         selected = loans[choice]
         return_date = input("Enter return date (YYYY-MM-DD): ").strip()
+
+        try:
+            datetime.strptime(return_date, "%Y-%m-%d")
+        except ValueError:
+            print("Invalid date format. Please use YYYY-MM-DD.")
+            return
  
         success = self.db.return_book(patron_id, selected[0], selected[2], return_date)
         if success:
@@ -246,11 +260,11 @@ class library_database_hub:
  
         print("\nError Types:")
         print("  1 - Inventory Error")
-        print("  2 - Cataloguing Error")
+        print("  2 - Cataloging Error")
         print("  3 - System Error")
         print("  4 - Other")
  
-        error_types = {1: "Inventory Error", 2: "Cataloguing Error", 3: "System Error", 4: "Other"}
+        error_types = {1: "Inventory Error", 2: "Cataloging Error", 3: "System Error", 4: "Other"}
         try:
             error_choice = int(input("Select error type: ").strip())
             error_type = error_types.get(error_choice, "Other")
@@ -259,6 +273,12 @@ class library_database_hub:
  
         description = input("Describe the issue: ").strip()
         log_date = input("Enter date (YYYY-MM-DD): ").strip()
+
+        try:
+            datetime.strptime(log_date, "%Y-%m-%d")
+        except ValueError:
+            print("Invalid date format. Please use YYYY-MM-DD.")
+            return
  
         success = self.db.report_system_issue(patron_id, log_date, description, error_type)
         if success:
