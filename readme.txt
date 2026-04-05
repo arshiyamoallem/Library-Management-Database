@@ -21,8 +21,6 @@ authors, genres, and circulation history for demonstration.
 2. Run the command: python main.py
 3. Follow the custom on-screen menu to interact with the database.
 
-
-
 --- YOUTUBE DEMONSTRATION LINK ---
 Link: [INSERT YOUR YOUTUBE URL HERE]
 
