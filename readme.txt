@@ -22,7 +22,7 @@ authors, genres, and circulation history for demonstration.
 3. Follow the custom on-screen menu to interact with the database.
 
 --- YOUTUBE DEMONSTRATION LINK ---
-Link: [INSERT YOUR YOUTUBE URL HERE]
+https://youtu.be/sKO_i9wYUuM
 
 --- PROJECT OVERVIEW ---
 This project is a Library Management Database System using 
