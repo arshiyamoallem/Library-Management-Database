@@ -23,3 +23,9 @@ raw SQL wrapped in a Python CLI.
 
 It demonstrates N:N relationships (Circulation, Authorship, Categorization) 
 and 1:N reporting logic.
+
+## Future Updates
+This project will eventually be either:
+- GUI
+- Website
+As well, it might be more robust 
