@@ -281,7 +281,7 @@ class library_database_hub:
 
     def creator_info(self) -> None:
         self.loading_animation("Loading Creator Info") 
-        print("Arshiya Moallem\nSoftware Engineer - Carleton University\n")
+        print("Arshiya Moallem\nSoftware Engineer\n")
     
     # --- MAIN PROGRAM LOOP ---
     
