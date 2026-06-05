@@ -1,6 +1,5 @@
 #Library-Management-Database 
 
-
 --- DATABASE FILENAME & LOCATION ---
 Filename: library.db
 Location: Root directory [Library-Management-Database] 
