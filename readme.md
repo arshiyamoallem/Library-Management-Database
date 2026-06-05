@@ -2,6 +2,7 @@
 
 ## DATABASE FILENAME & LOCATION 
 Filename: library.db
+
 Location: Root directory [Library-Management-Database] 
 (the same folder as main.py and database.py)
 
@@ -18,6 +19,7 @@ authors, genres, and circulation history for demonstration.
 
 ## PROJECT OVERVIEW 
 This project is a Library Management Database System using 
-raw SQL wrapped in a Python CLI. It demonstrates N:N 
-relationships (Circulation, Authorship, Categorization) 
+raw SQL wrapped in a Python CLI. 
+
+It demonstrates N:N relationships (Circulation, Authorship, Categorization) 
 and 1:N reporting logic.
