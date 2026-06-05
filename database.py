@@ -1,8 +1,4 @@
 """
-Student Name: Arshiya Moallem
-Student Number: 101324189
-
-Final SQlite Project 
 Library Database Management System - Database Layer 
 """
 

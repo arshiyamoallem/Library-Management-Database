@@ -1,9 +1,5 @@
-=======================================================================
-Student Name: Arshiya Moallem
-Student Number: 101324189
-COMP 3005 - Winter 2026 Term Project
-Library-Management-Database 
-=======================================================================
+#Library-Management-Database 
+
 
 --- DATABASE FILENAME & LOCATION ---
 Filename: library.db
@@ -21,13 +17,8 @@ authors, genres, and circulation history for demonstration.
 2. Run the command: python main.py
 3. Follow the custom on-screen menu to interact with the database.
 
---- YOUTUBE DEMONSTRATION LINK ---
-https://youtu.be/sKO_i9wYUuM
-
 --- PROJECT OVERVIEW ---
 This project is a Library Management Database System using 
 raw SQL wrapped in a Python CLI. It demonstrates N:N 
 relationships (Circulation, Authorship, Categorization) 
 and 1:N reporting logic.
-
-=========================================================
