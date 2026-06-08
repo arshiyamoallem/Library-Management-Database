@@ -43,6 +43,10 @@ The database is automatically seeded with sample patrons, books, authors, genres
 
 ---
 
+# Image
+
+![alt text](img/sample.png)
+
 ## Project Structure
 
 ```

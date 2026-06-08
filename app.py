@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox 
 from datetime import datetime
 from database import LibraryDB
+import ctypes
 
 # ── Colour palette ──
 BG        = "#1a1a2e"   # deep navy
@@ -14,10 +15,25 @@ WARNING   = "#f5a623"   # orange
 ENTRY_BG  = "#243050"   # input background
 BORDER    = "#2a3a60"   # subtle border
 
+# Icon for Windows taskbar (must be set before main window is created)
+try:
+    # Forces Windows to treat this script as its own separate application in the taskbar
+    myappid = 'library.database.management.system.1.0'
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+except Exception:
+    pass
+
 class library_database_app(tk.Tk):
     def __init__(self)-> None:
         super().__init__() # Initialize the Tkinter application, creates the window
         self.db = LibraryDB()
+
+        self.photo = tk.PhotoImage(file='img/MyDatabaseIcon.png')
+        self.wm_iconphoto(False, self.photo) 
+        # wm - Communicate with window manager to be the set icon for the application. 
+        # False means it won't affect the icon of any parent windows, and photo is the image to use as the icon.
+
+
         self.title("Library Management Database")
         self.geometry("1100x700")
         self._build_ui()
